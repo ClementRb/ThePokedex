@@ -1,6 +1,9 @@
 <template>
   <div class="common-layout">
-    <img alt="Pokedex logo" src="./assets/Pokedex.png" />
+    <router-link :to="{ name: 'Home' }">
+      <img alt="Pokedex logo" src="./assets/Pokedex.png"
+    /></router-link>
+
     <el-row>
       <el-col :span="24">
         <router-view />
@@ -22,5 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.clearText {
+  color: white;
 }
 </style>
